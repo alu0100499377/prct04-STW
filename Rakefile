@@ -3,17 +3,17 @@ task :default do
   sh "ruby rps.rb"
 end
 
-desc "run the client with rock"
+desc "ejecuta con piedra"
 task :rock do
-  sh %q{curl -v 'http://localhost:9292?choice=rock'}
+  sh %q{curl -v 'http://localhost:8080?choice=rock'}
 end
 
-desc "run the client with paper"
+desc "ejecuta con papel"
 task :paper do
-  sh %q{curl -v 'http://localhost:9292?choice=paper'}
+  sh %q{curl -v 'http://localhost:8080?choice=paper'}
 end
 
-desc "run the client with scissors"
+desc "ejecuta con tijeras"
 task :scissors do
-  sh %q{curl -v 'http://localhost:9292?choice=scissors'}
+  sh %q{curl -v 'http://localhost:8080?choice=scissors'}
 end
