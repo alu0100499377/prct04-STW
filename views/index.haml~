@@ -5,17 +5,17 @@
 		%title PPT
 		%link{:href => "/public/css/bootstrap.css", :rel => "stylesheet"}
 		%link{:href => "/public/css/bootstrap-responsive.css", :rel => "stylesheet"}/
-	%body
+	%body{:background => "/public/img/fondo.jpeg"}
 		.navbar.navbar-inverse.navbar-fixed-top
 			.navbar-inner
 		
 		.row-fluid
 			.span3		
-				%a{:href => "/?choice=rock", :class => "btn btn-large btn-success"} Piedra
+				%a{:href => "/?choice=piedra", :class => "btn btn-large btn-success"} Piedra
 			.span3
-				%a{:href => "/?choice=rock", :class => "btn btn-large btn-primary"} Tijera
+				%a{:href => "/?choice=tijeras", :class => "btn btn-large btn-primary"} Tijera
 			.span3
-				%a{:href => "/?choice=rock", :class => "btn btn-large btn-default"} Papel
+				%a{:href => "/?choice=papel", :class => "btn btn-large btn-default"} Papel
 			
 		%br		
 		.row-fluid
@@ -23,16 +23,7 @@
 				%center  
 					%h1 #{answer}
 					%br
-		.row-fluid			
-			.span4
-				%center				
-					%h3 Ganadas: 
-			.span4
-				%center				
-					%h3 Empatadas: 
-			.span4
-				%center				
-					%h3 Perdidas: 
+		
 
 
 

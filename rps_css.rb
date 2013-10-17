@@ -12,6 +12,7 @@ module PiedraPapelTijeras
 			@throws = @defeat.keys
 		end
 		
+		
 
 		def call(env)
 			req = Rack::Request.new(env)
@@ -21,17 +22,20 @@ module PiedraPapelTijeras
 			computer_throw = @throws.sample
 			player_throw = req.GET["choice"]
 			answer = if !@throws.include?(player_throw)
-				#alert = 0
+				
 				"Elige una de las opciones:"
 			elsif player_throw == computer_throw
-				#alert = 1
+				
 				"Has empatado! :|"
+				
 			elsif computer_throw == @defeat[player_throw]
-				#alert = 2
+				
 				"Vaamos! #{player_throw} gana a #{computer_throw}!! :D"
+				
 			else
-				#alert = 3
-				"Ouu valla! #{computer_throw} gana a #{player_throw}! :("
+				
+				"Ouu vaya! #{computer_throw} gana a #{player_throw}! :("
+				
 			end
 
 			engine = Haml::Engine.new File.open("views/index.haml").read
